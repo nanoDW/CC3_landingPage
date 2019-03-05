@@ -1,0 +1,70 @@
+:root {
+    --myWhite: rgb(245, 241, 234);
+    --myPurple: rgb(217, 151, 243);
+}
+
+body {
+    margin: 0;
+    font-family: 'Laila', sans-serif;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:
+        url(/MartynaGontarzIMG/laptok.jpg);
+        background-position: top right;
+        height: 300px;
+    color: var(--myWhite);
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 60px;
+    font-size: 1.5em;
+}
+
+.name {
+    color: var(--myPurple);
+}
+
+.welcome h1, h3, h5 {
+    margin: 0;
+}
+
+.menu-socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 30px;
+    color: white;
+    font-weight: 600;
+    width: 600px;
+    height: 300px;
+    background-color: rgba(107, 0, 150, 0.7);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+.icons {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
