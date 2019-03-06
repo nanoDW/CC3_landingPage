@@ -15,8 +15,9 @@ body {
     background:
         url(/MartynaGontarzIMG/laptok.jpg);
         background-position: top right;
-        height: 300px;
+        height: 400px;
     color: var(--myWhite);
+    
 }
 
 .welcome {
@@ -25,7 +26,7 @@ body {
     justify-content: space-between;
     margin-left: 60px;
     font-size: 1.5em;
-}
+}    
 
 .name {
     color: var(--myPurple);
@@ -43,8 +44,18 @@ body {
     color: white;
     font-weight: 600;
     width: 600px;
-    height: 300px;
+    height: 100%;
     background-color: rgba(107, 0, 150, 0.7);
+}
+
+.main-photo {
+    background-image: url(MartynaGontarzIMG/modlicha.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    border-radius: 50%;
+    /* border: solid rgb(130, 73, 153) 1px; */
+    margin-left: -100px;
 }
 
 .menu {
@@ -61,6 +72,11 @@ body {
     padding-bottom: 30px;
 }
 
+.links {
+    border-bottom: 1px solid var(--myWhite);
+    padding-left: 20px;
+}
+
 .icons {
     width: 20%;
     display: flex;
@@ -68,3 +84,30 @@ body {
     align-items: flex-start;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons p{
+    font-size: 1.5em;
+    grid-area: p;
+}
+
+.button1 {
+    border-radius: 100px;
+    background-color: var(--myPurple);
+    color: var(--myWhite);
+    text-align: center;
+    font-size: 18px;
+    border: none;
+}
+
+.button2 {
+    border-radius: 100px;
+    background-color: var(--myWhite);
+    border: 2px solid var(--myPurple);
+    color: var(--myPurple);
+    text-align: center;
+    font-size: 18px;
+ }
