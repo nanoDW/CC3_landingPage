@@ -173,18 +173,39 @@ header {
 #about h1 {
     text-align: center;
     font-size: 2.5em; 
+    padding-top: 15px;
     margin: 10px auto;
 }
 .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #FFF;
+    margin: 15px 20px;
+    font-size: 1.8em;
+    padding: 15px;
 }
+.about-container aside {
+    font-weight: bold;
+    line-height: 1.7;
+}
+.about-container aside span {
+    color: #2C88CB;
+}
+.about-container article {
+    margin-top: 20px;
+    border-top: 2px solid #2C88CB;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
 /* End of about section */
 /* End of main section */
 
 
-/* Start of media queries */
+/* ****Start of media queries**** */
+
 @media only screen and (min-width: 480px) {  
     header {
         font-size: 15px;
@@ -255,6 +276,25 @@ header {
         font-size: 3.3em;
     }
     /* End of Intro section */
+    /* Start of about section */
+    .about-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-container article {
+        margin: 0 0 20px 0;
+        border-top: none;
+        border-left: 2px solid #2C88CB;
+        padding: 20px;
+        text-align: justify;
+        line-height: 1.5;
+        max-width: 650px;
+    }
+    .about-container aside {
+        padding: 0 20px;
+    }
+    
+
 }
     
 @media only screen and (min-width: 1024px) {  
@@ -341,6 +381,14 @@ header {
         right: 600px;
     }
     /* End of header styling */
+    /* Start of main section */
+   /* Start of About section */
+   .about-container {
+    max-width: 1170px;
+    margin: auto;
+   }
+   /* End of about section */
+    /* End of main section */
 }
 
 
