@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(229, 234, 230);
+    font-size: 18px;
+    font-family: PT Sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* STYLES FOR THE HEADER */
+
+header {
+    
+    /* image and dark overlay */
+    background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 46, 46, 0.5)), url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+    color: white;
+    
+}
+
+.navigation {
+    margin: 0px;
+    padding: 20px 30px;
+    font-size: 20px;
+    float: right;
+}
+
+h1 {
+    font-size: 10vh;
+    margin: 2vh 0;
+}
+
+h2 {
+    font-size: 4vh;
+}
+
+
+nav ul {
+    padding: 0px, 20px;
+}
+nav ul li {
+    display: inline-block;
+    padding: 25px;
+}
+
+.intro {
+   position: absolute;
+   top: 30%;
+   left: 20%
+}
+
+header .socials {
+    position: absolute:
+
+}
+
+.invite {
+    position: absolute;
+    left: 30%;
+    top: 65%;
+    font-size:3vh;
+}
+
+/* STYLES FOR THE ABOUT ME SECTION */
+
+.about {
+    display: inline-flex;
+    justify-content: center;
+    padding: 15px;
+
+    /*
+    align-items: center;
+    align-content: center;
+    
+    */
+}
+
+.contact-data {
+    flex: 1 1;
+    background-color: white;
+    max-width: 30%;
+    padding: 40px 0px 40px 40px;
+    font-weight: bold;
+    line-height: 2;
+    vertical-align: middle;
+}
+
+.about-description {
+    flex: 1 1;
+    max-width: 40%;
+    text-align: justify;
+    padding: 40px 40px 40px 0px;
+    background-color: white;
+}
+
+#about h2 {
+   display: block;
+   width: fit-content;
+   margin: 90px auto 20px auto;
+}
+
+#about span {
+    color:rgb(79, 188, 157)
+}
