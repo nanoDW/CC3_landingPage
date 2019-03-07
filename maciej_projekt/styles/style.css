@@ -1,0 +1,296 @@
+/* font-family: 'Ubuntu', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 10px;
+    height: 100vh;
+    background-image: url(/images/cover2.png);
+    background-position: center;
+    background-size: cover;
+    color: #222;
+    position: relative;
+}
+.hero {
+    width: 300px;
+    position: absolute;
+    top: 55%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: 'Ubuntu', sans-serif;
+}
+.hero h1 {
+    font-size: 5.5em;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.hero h2 {
+    font-size: 2.2em;
+    font-weight: bold; 
+    line-height: 1.5;
+}
+.hero p {
+    font-size: 1.8em;
+}
+.hero span {
+    color: #2C88CB;
+}
+.profile-pic {
+    background-image: url(/images/profile.jpg);
+    background-size: cover;
+    position: absolute;
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+    top: 15%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
+}
+/* Hamburger animation made by Jonathan Suh @jonsuh 
+    https://jonsuh.com/hamburgers */
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+/* menu styling */
+.menu {
+    background-color: #2c88cb;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Ubuntu', sans-serif;
+    transform: translateY(-100%);
+    transition: ease-in-out 0.5s;
+}
+.menu-active {
+    transform: none;
+}
+.navigation {
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+}
+
+.navigation a {
+    font-size: 3em;
+    color: #FFF;
+    text-decoration: none;
+
+}
+.social ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.social p {
+    font-size: 2em;
+    color: #FFF;
+    text-align: center;
+    line-height: 3;
+}
+.social a {
+    font-size: 4em;
+    color: #FFF;
+    text-decoration: none;  
+}
+/* End of header styling */
+
+/* Start of Intro section */
+.intro {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    margin: 15px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+.intro  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro button {
+    width: 200px;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 25px;
+    font-size: 1.8em;
+    font-weight: bold;
+    border: none;
+}
+.intro button.button-contact{
+    color: #FFF;
+    background-color: #2C88CB;
+}
+.intro button.button-cv{
+    color:  #2C88CB;
+    border: 1px solid #2C88CB;
+    background-color: #FFF;
+}
+/* End of intro section */
+
+/* Start of media queries */
+@media only screen and (min-width: 480px) {  
+    header {
+        font-size: 15px;
+    }
+    /* Start of header styling */
+    .hero {
+        width: 420px;
+        top: 55%;
+    }
+    .profile-pic {
+        height: 300px;
+        width: 300px;
+    }
+    /* End of header styling */
+}
+
+@media only screen and (min-width: 768px) {  
+    /* Start of header styling */
+    header {
+        font-size: 10px;
+        height: 50vh;
+        min-height: 350px;
+    } 
+    .hero {
+        width: 300px;
+        top: 30%;
+        margin-left: 90px;
+    }
+    .profile-pic {
+        height: 210px;
+        width: 210px;
+        margin-right: 90px; 
+                /*sprawdzić dlaczego right nie działa*/
+        top: 25%;
+    }
+    .menu {
+        height: 40vh;
+        min-height: 300px;
+    }
+    .navigation {
+        margin: 60px 30px;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    .social {
+        width: 300px;
+        margin: auto;
+    }
+}
+    /* End of header styling */
+@media only screen and (min-width: 1024px) {  
+    /* Start of header styling */
+    header {
+        font-size: 10px;
+        height: 680px; 
+        display: flex;
+        justify-content: flex-end;
+    } 
+    .hero {
+        font-size: 11px;
+        width: 320px;
+        top: 164px;
+        left: 90px;
+        margin:0;
+    }
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        transform: none;
+        position: static;
+        z-index: 0;
+        background-color: rgba(44, 136, 203, 0.9);
+        width: 50%;
+        max-width: 600px;
+        height: 680px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .navigation {
+        width: 430px;
+        flex-direction: row;
+        justify-content: space-evenly; 
+        margin-top: 30px;
+        margin-right: 40px;
+    }
+    .navigation a {
+        font-size: 1.8em;
+    }
+    .social {
+        margin-bottom: 40px;
+        width: 150px;
+        margin-right: 40px;
+    }
+    .social p {
+        font-size: 1.4em;
+        text-align: right;
+    }
+    .social ul {
+        justify-content: space-between;
+    }
+    
+    .social a {
+        font-size: 2.5em;
+    }
+    .profile-pic {
+        height: 250px;
+        width: 250px;
+        margin-right: -125px;
+        right: 50%;
+        top: 110px;
+    }
+/* End of header styling */
+} 
+
+@media only screen and (min-width: 1200px) { 
+     /* Start of header styling */
+    header {
+        max-width: 1440px;
+        margin: auto;
+    }
+    .hero {
+        font-size: 12px;
+        width: 400px;
+    }
+    .navigation {
+        width: 500px;
+    }
+    .profile-pic {
+        height: 300px;
+        width: 300px;
+        margin-right: -150px;
+        right: 600px;
+    }
+    /* End of header styling */
+}
+
+
+
