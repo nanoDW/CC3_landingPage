@@ -1,6 +1,8 @@
 :root {
     --myWhite: rgb(245, 241, 234);
     --myPurple: rgb(217, 151, 243);
+    --myGreen: rgb(10, 177, 60);
+    
 }
 
 body {
@@ -10,6 +12,7 @@ body {
 
 .top-section {
     display: flex;
+    flex-flow: row-reverse;
     align-items: center;
     justify-content: space-between;
     background:
@@ -20,22 +23,6 @@ body {
     
 }
 
-.welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 60px;
-    font-size: 1.5em;
-}    
-
-.name {
-    color: var(--myPurple);
-}
-
-.welcome h1, h3, h5 {
-    margin: 0;
-}
-
 .menu-socials {
     display: flex;
     flex-direction: column;
@@ -43,9 +30,21 @@ body {
     padding-right: 30px;
     color: white;
     font-weight: 600;
-    width: 600px;
+    width: 550px;
     height: 100%;
     background-color: rgba(107, 0, 150, 0.7);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    list-style-type: none;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--myWhite);
 }
 
 .main-photo {
@@ -56,12 +55,6 @@ body {
     border-radius: 50%;
     /* border: solid rgb(130, 73, 153) 1px; */
     margin-left: -100px;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 100px;
 }
 
 .socials {
@@ -75,6 +68,8 @@ body {
 .links {
     border-bottom: 1px solid var(--myWhite);
     padding-left: 20px;
+    margin: 0;
+    font-size: 1rem;
 }
 
 .icons {
@@ -82,32 +77,85 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    list-style-type: none;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 60px;
+    font-size: 1.5em;
+}    
+
+.hello {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.introduce {
+    margin: 0;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.name {
+    color: var(--myPurple);
+}
+
+.exclamation {
+    margin: 0;
+    font-size: .83em;
+    font-weight: bold;
+}
+
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer{
+    font-size: 1.3em;
+    align-self: center;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-evenly;
+    align-self: center;
 }
 
-.buttons p{
-    font-size: 1.5em;
-    grid-area: p;
-}
-
-.button1 {
+.contact-button {
     border-radius: 100px;
     background-color: var(--myPurple);
+    border: 2px solid var(--myPurple);
     color: var(--myWhite);
     text-align: center;
     font-size: 18px;
-    border: none;
+    font-family: 'Laila', sans-serif;
+    margin-right: 30px;
+    width: 140px;
 }
 
-.button2 {
+.contact-button:hover {
+    background-color: var(--myGreen);
+    border: 2px solid var(--myGreen);
+    cursor: pointer;
+}
+
+.cv-button {
     border-radius: 100px;
     background-color: var(--myWhite);
     border: 2px solid var(--myPurple);
     color: var(--myPurple);
     text-align: center;
     font-size: 18px;
+    font-family: 'Laila', sans-serif;
+    width: 140px;
+ }
+
+ .cv-button:hover {
+    border: 2px solid var(--myGreen);
+    color: var(--myGreen);
+    cursor: pointer;
  }
