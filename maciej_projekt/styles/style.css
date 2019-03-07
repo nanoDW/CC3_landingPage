@@ -5,6 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;  
+}
 
 header {
     font-size: 10px;
@@ -93,8 +99,6 @@ header {
 .navigation a {
     font-size: 3em;
     color: #FFF;
-    text-decoration: none;
-
 }
 /* dodać hovery!!! */
 
@@ -102,7 +106,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    list-style: none;
+
 }
 .social p {
     font-size: 2em;
@@ -113,7 +117,6 @@ header {
 .social a {
     font-size: 4em;
     color: #FFF;
-    text-decoration: none;  
 }
 /* dodać hovery!!! */
 
@@ -124,7 +127,7 @@ header {
 .intro {
     font-family: 'Ubuntu', sans-serif;
     font-size: 10px;
-    margin: 15px;
+    margin: 15px 15px 40px 15px;
     text-align: center;
 }
 .intro h1 {
@@ -157,8 +160,29 @@ header {
 }
 /* dodać hovery!!! */
 
-
 /* End of intro section */
+/* Start of main section */
+.main {
+    background-color: #F9F9F9;
+    font-size: 10px
+}
+/* Start of about section */
+#about {
+    font-family: 'Ubuntu', sans-serif;
+}
+#about h1 {
+    text-align: center;
+    font-size: 2.5em; 
+    margin: 10px auto;
+}
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* End of about section */
+/* End of main section */
+
 
 /* Start of media queries */
 @media only screen and (min-width: 480px) {  
