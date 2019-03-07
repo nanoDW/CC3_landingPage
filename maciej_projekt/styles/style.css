@@ -9,7 +9,7 @@
 header {
     font-size: 10px;
     height: 100vh;
-    background-image: url(/images/cover2.png);
+    background-image: url(/maciej_projekt/images/cover2.png);
     background-position: center;
     background-size: cover;
     color: #222;
@@ -42,7 +42,7 @@ header {
     color: #2C88CB;
 }
 .profile-pic {
-    background-image: url(/images/profile.jpg);
+    background-image: url(/maciej_projekt/images/profile.jpg);
     background-size: cover;
     position: absolute;
     border-radius: 50%;
