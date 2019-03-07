@@ -9,7 +9,7 @@
 header {
     font-size: 10px;
     height: 100vh;
-    background-image: url(/maciej_projekt/images/cover2.png);
+    background-image: linear-gradient(rgba(250, 250, 250, 0.6), rgba(200, 200, 200, 0.7)), url(/maciej_projekt/images/cover4.jpg);
     background-position: center;
     background-size: cover;
     color: #222;
@@ -39,7 +39,7 @@ header {
     font-size: 1.8em;
 }
 .hero span {
-    color: #2C88CB;
+    color: #275779;
 }
 .profile-pic {
     background-image: url(/maciej_projekt/images/profile.jpg);
@@ -96,6 +96,8 @@ header {
     text-decoration: none;
 
 }
+/* dodać hovery!!! */
+
 .social ul {
     display: flex;
     flex-direction: row;
@@ -113,6 +115,9 @@ header {
     color: #FFF;
     text-decoration: none;  
 }
+/* dodać hovery!!! */
+
+
 /* End of header styling */
 
 /* Start of Intro section */
@@ -122,10 +127,10 @@ header {
     margin: 15px;
     text-align: center;
 }
-
 .intro h1 {
     font-size: 2em;
     margin: 10px 0;
+    font-weight: 100;
 }
 .intro  .buttons {
     display: flex;
@@ -150,12 +155,16 @@ header {
     border: 1px solid #2C88CB;
     background-color: #FFF;
 }
+/* dodać hovery!!! */
+
+
 /* End of intro section */
 
 /* Start of media queries */
 @media only screen and (min-width: 480px) {  
     header {
         font-size: 15px;
+        min-height: 700px;
     }
     /* Start of header styling */
     .hero {
@@ -167,7 +176,14 @@ header {
         width: 300px;
     }
     /* End of header styling */
+    /* Start of Intro section */
+    .intro h1 {
+        font-size: 3em;
+        margin: 20px 0;
+    }
+    /* End of Intro section */
 }
+
 
 @media only screen and (min-width: 768px) {  
     /* Start of header styling */
@@ -185,7 +201,6 @@ header {
         height: 210px;
         width: 210px;
         margin-right: 90px; 
-                /*sprawdzić dlaczego right nie działa*/
         top: 25%;
     }
     .menu {
@@ -203,18 +218,30 @@ header {
         width: 300px;
         margin: auto;
     }
-}
     /* End of header styling */
+
+    /* Start of Intro section */
+    .intro  .buttons {
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 450px;
+    }
+    .intro h1 {
+        font-size: 3.3em;
+    }
+    /* End of Intro section */
+}
+    
 @media only screen and (min-width: 1024px) {  
     /* Start of header styling */
     header {
-        font-size: 10px;
         height: 680px; 
         display: flex;
         justify-content: flex-end;
     } 
     .hero {
-        font-size: 11px;
+        font-size: 10px;
         width: 320px;
         top: 164px;
         left: 90px;
@@ -277,7 +304,7 @@ header {
         margin: auto;
     }
     .hero {
-        font-size: 12px;
+        font-size: 13px;
         width: 400px;
     }
     .navigation {
