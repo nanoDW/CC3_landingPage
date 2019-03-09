@@ -12,53 +12,56 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav>
             <ul class="navigation">
-                <li>
+                <li class="navigation__item">
                     <a href="#about">About me</a>
                 </li>
-                <li>
+                <li class="navigation__item">
                     <a href="#skills">Skills</a>
                 </li>
-                <li>
+                <li class="navigation__item">
                     <a href="#gallery">Gallery</a>
                 </li>
-                <li>
-                    <a href="#contact-form">Contact</a>
+                <li class="navigation__item last-item">
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
-        <div class="intro">
-            <h1>Hi there!</h1>
-            <h2>My name is Kamila</h2>
+        <div class="header__intro">
+            <p class="intro__greeting">Hi there!</p>
+            <p class="intro__name">My name is Kamila</p>
         </div>
-            <img class = "portrait">
-        <div class="socials">
-            <p>Useful links</p>
-            <ul>
+        <img class="portrait">
+        <div class="header__socials">
+            <p class="socials__paragraph">Useful links</p>
+            <ul class="socials__links">
                 <li><a href="https://github.com/KamilaCoder"></a></li>
                 <li><a href="https://www.linkedin.com/in/kamilaspodymek/"></a></li>
             </ul>
         </div>
-        <div class="invite">
-            <p>I'll be happy to create some projects with you!</p>
-            <button type="button"></button>
-            <button type="button"></button>
-        </div>
     </header>
 
+    <section class="invite">
+        <h1 class="invite__text">I'll be happy to create some projects with you!</h1>
+        <div class="invite__buttons">
+            <button type="button" class="invite__button"></button>
+            <button type="button" class="invite__button">deewe</button>
+        </div>
+    </section>
+
     <main>
-        <section id="about">
-            <h2>About me</h2>
-            <div class= "about">
-                <ul class = "contact-data">
+        <section id="about" class="about">
+            <h2 class="about__header">About me</h2>
+            <div class= "about-container">
+                <ul class = "about-container__contact-data">
                     <li>Full name: <span>Kamila Spodymek</span></li>
                     <li>Age: <span>28</span></li>
                     <li>Job: <span>Wannabe developer :)</span></li>
                     <li>E-mail: <span>kamila.spodymek@gmail.com</span></li>
                 </ul>
-                <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                <p class="about-container__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Orci ac auctor augue mauris augue. Aliquam vestibulum morbi blandit cursus risus
                 at ultrices. Eget nunc lobortis mattis aliquam faucibus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci ac auctor augue mauris augue. Aliquam
@@ -66,70 +69,87 @@
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="hard-skills">
-                <h3>Hard ones</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>Search Engine Optimization</li>
-                </ul>
-            </div>
-            <div class="soft-skills">
-                <h3>Soft ones</h3>
-                <ul>
-                    <li>Team management</li>
-                    <li>Project management</li>
-                    <li>Problem solving</li>
-                    <li>Remote work</li>
-                </ul>
-            </div>
-        </section>
-                
-        <section id="gallery">
-            <h2>Gallery</h2>
-
-            <!-- Spróbuje tu zrobić grida, nie wiem jeszcze czy bedzie mi potrzebny dodatkowy container na to-->
-            <img>
-            <img>
-            <img>
-            <img> 
-            <img>
-            <img>
-        </section>
-
-        <section id="contact-form">
-            <div class="left-side">
-                <p>Got a question? I’m here to help you! Send me a message and I will answer you as soon as possible!</p>
-                <div class = "address">
-
+        <section id="skills" class="skills">
+            <h2 class="skills__header">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-container__hard-skills">
+                    <h3 class="hard-skills__header">Hard ones</h3>
+                    <ul class="hard-skills__list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Search Engine Optimization</li>
+                    </ul>
                 </div>
-                <ul class = "socials">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div class="skills-container__soft-skills">
+                    <h3 class="soft-skills__header">Soft ones</h3>
+                    <ul class="soft-skills__list">
+                        <li>Team management</li>
+                        <li>Project management</li>
+                        <li>Problem solving</li>
+                        <li>Remote work</li>
+                    </ul>
+                </div>
             </div>
-            <div class="right-side">
-                <h2>Feel free to contact me!</h2>
-                <form action = "#" method = "#">
-                    <input type="text">
-                    <input type="email">
-                    <input type="text">
-                    <textarea></textarea>
-                    <button type="submit"></button>
-                </form>
+        </section>
                 
+        <section id="gallery" class="gallery">
+            <h2 class="gallery__header">Gallery</h2>
+            <p class="gallery__intro">I don't have a portfolio just yet, so I will share with you some beautiful website designs.</p>
+            <div class="gallery__photos">
+                <div>
+                    <a href="https://dezea.digital/" target="_blank"><img src="images/Dezea_Design.jpg" class="photos__screen" alt="Dezea website design"></a>
+                </div>
+                <div>
+                    <a href="https://www.apsis.com/" target="_blank"><img src="images/APSIS_Design.jpg" class="photos__screen" alt="Apsis website design"></a>
+                </div>
+                <div>
+                    <a href="http://laufke.net/" target="_blank"><img src="images/Laufke_Design.jpg" class="photos__screen" alt="Laufke website design"></a>
+                </div>
+                <div>
+                    <a href="http://g.co/thedivide" target="_blank"><img src="images/Divide_Design.jpg" class="photos__screen" alt="Divide website design"></a>
+                </div>
+                <div>
+                    <a href="https://www.jtbeurope.com/" target="_blank"><img src="images/JTB_Design.jpg" class="photos__screen" alt="JTB events website design"></a>
+                </div>
+                <div>
+                    <a href="https://www.northernwolf.co/" target="_blank"><img src="images/Northen_Wolf_Design.jpg" class="photos__screen" alt="Northen Wolf website design"></a>
+                </div>
             </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-form">
+                <div class="contact-form__left-side">
+                    <p class="left-side__paragraph">Got a question? I’m here to help you! Send me a message and I will answer you as
+                        soon as possible!</p>
+                    <div class="left-side__address">
+                    </div>
+                    <ul class="left-side__socials">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="contact-form__right-side">
+                    <h2 class="right-side__header">Feel free to contact me!</h2>
+                    <form action="#" method="#" class="right-side__form">
+                        <input type="text" class="form__name">
+                        <input type="email" class="form__email">
+                        <input type="text" class="form__title">
+                        <textarea class="form__message"></textarea>
+                        <button type="submit" class="form__submit"></button>
+                    </form>
+                </div>
+            </div>
+            
         </section>
     </main>
         
-    <footer>
-        <p>Created with love by Kamila</p>
+    <footer class="footer">
+        <p class="footer__paragraph">Created with love by Kamila</p>
     </footer>
 
 </body>

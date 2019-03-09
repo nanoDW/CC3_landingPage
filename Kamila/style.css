@@ -1,13 +1,26 @@
 body {
+    font-size: 18px;
     margin: 0;
     padding: 0;
-    background-color: rgb(229, 234, 230);
-    font-size: 18px;
+    background-color: #D2E1F4;
     font-family: PT Sans;
+    color: rgb(45, 49, 66);
 }
 
 a {
     text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: #701D3B;
 }
 
 ul {
@@ -16,99 +29,246 @@ ul {
 
 /* STYLES FOR THE HEADER */
 
-header {
-    
-    /* image and dark overlay */
-    background-image: linear-gradient(rgba(34, 33, 33, 0.5), rgba(46, 46, 46, 0.5)), url("images/hero.jpg");
+.header {
+    position: relative;
+    display: block;
+    background-image: url("images/hero.jpg");
     background-size: cover;
     background-position: center;
-    height: 700px;
+    height: 85vh;
     width: 100%;
     color: white;
     
 }
 
 .navigation {
-    margin: 0px;
-    padding: 20px 30px;
-    font-size: 20px;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    background-color: rgba(18, 55, 70, 0.5);
 }
 
-h1 {
-    font-size: 10vh;
-    margin: 2vh 0;
+.navigation__item {
+    padding: 1rem 1.5rem;
 }
 
-h2 {
-    font-size: 4vh;
+.last-item {
+    margin-right: 1.5rem;
 }
 
-
-nav ul {
-    padding: 0px, 20px;
-}
-nav ul li {
-    display: inline-block;
-    padding: 25px;
-}
-
-.intro {
-   position: absolute;
-   top: 30%;
-   left: 20%
+.header__intro {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    /* background-color: rgba(16, 43, 35, 0.7); */
+    background-color: rgba(18, 55, 70, 0.7);
+    padding: 1.5rem;
 }
 
-header .socials {
-    position: absolute:
+.intro__greeting {
+    font-size: 5rem;
+    margin: 0;  
+}
 
+.intro__name {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header__socials {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    padding: 1rem;
+    background-color: rgba(18, 55, 70, 0.7);
 }
 
 .invite {
-    position: absolute;
-    left: 30%;
-    top: 65%;
-    font-size:3vh;
+    padding: 2%;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.invite__text {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.invite__buttons {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+/* STYLES FOR SECTION HEADERS */
+
+.skills__header, 
+.about__header, 
+.gallery__header {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #028090;
+}
+
+.gallery__header {
+    padding-bottom: 0;
 }
 
 /* STYLES FOR THE ABOUT ME SECTION */
 
-.about {
-    display: inline-flex;
+.about-container {
+    display: flex;
     justify-content: center;
-    padding: 15px;
-
-    /*
-    align-items: center;
-    align-content: center;
-    
-    */
+    box-sizing: border-box;
+    margin: 0 10%;
 }
 
-.contact-data {
+.about-container__contact-data {
     flex: 1 1;
+    box-sizing: border-box;
     background-color: white;
-    max-width: 30%;
-    padding: 40px 0px 40px 40px;
+    max-width: 40%;
     font-weight: bold;
     line-height: 2;
     vertical-align: middle;
+    padding: 4%;
+    margin: 0 auto;
 }
 
-.about-description {
+.about-container__description {
     flex: 1 1;
-    max-width: 40%;
+    max-width: 60%;
     text-align: justify;
-    padding: 40px 40px 40px 0px;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 4%;
+    margin: 0 auto;
+}
+
+.about-container__contact-data span {
+    color: #028090
+}
+
+
+/* STYLES FOR THE SKILLS ME SECTION */
+
+.skills-container {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 10%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.skills-container__hard-skills,
+.skills-container__soft-skills {
+    flex: 1 1;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 48%;
     background-color: white;
 }
 
-#about h2 {
-   display: block;
-   width: fit-content;
-   margin: 90px auto 20px auto;
+.hard-skills__header, .soft-skills__header {
+    padding-left: 40px;
 }
 
-#about span {
-    color:rgb(79, 188, 157)
+
+/* STYLES FOR THE GALLERY */
+
+.gallery__intro {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 5%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.gallery__photos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 15px;
+    width: auto;
+    margin: 0 5%;
+    
+}
+
+.photos__screen {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* STYLES FOR THE CONTACT FORM */
+
+.contact {
+    display: flex;
+    background-color: white;
+    margin-top: 5%;
+}
+
+.contact-form {
+    display: flex;
+    margin: 5% 5%;
+    background-color: #D2E1F4;
+    box-sizing: border-box;
+}
+
+.contact-form__left-side {
+    max-width: 30%;
+    padding: 3%;
+    background-color: #028090;
+    box-sizing: border-box;
+}
+
+.contact-form__right-side {
+    padding: 0 7%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 65%;
+    
+}
+
+.right-side__header {
+    color: #028090;
+}
+
+.form__name, 
+.form__title,
+.form__message,
+.form__email {
+    flex: 1 1;
+    width: 100%;
+    border: none;
+    background: none;
+    padding-top: 5%;
+    border-bottom: 1px solid rgba(45, 49, 66, 1);
+    box-sizing: border-box;
+    font-family : inherit;
+    font-size : 100%;
+
+}
+.form__message {
+    height: 8rem;
+    padding: 0;
+    margin-top: 10%;
+}
+
+.footer__paragraph {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
 }
