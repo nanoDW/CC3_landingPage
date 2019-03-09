@@ -1,0 +1,161 @@
+:root {
+    --myWhite: rgb(245, 241, 234);
+    --myPurple: rgb(217, 151, 243);
+    --myGreen: rgb(10, 177, 60);
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Laila', sans-serif;
+}
+
+.top-section {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background:
+        url(/MartynaGontarzIMG/laptok.jpg);
+        background-position: top right;
+        height: 400px;
+    color: var(--myWhite);
+    
+}
+
+.menu-socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 30px;
+    color: white;
+    font-weight: 600;
+    width: 550px;
+    height: 100%;
+    background-color: rgba(107, 0, 150, 0.7);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    list-style-type: none;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--myWhite);
+}
+
+.main-photo {
+    background-image: url(MartynaGontarzIMG/modlicha.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    border-radius: 50%;
+    /* border: solid rgb(130, 73, 153) 1px; */
+    margin-left: -100px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+.links {
+    border-bottom: 1px solid var(--myWhite);
+    padding-left: 20px;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.icons {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style-type: none;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 60px;
+    font-size: 1.5em;
+}    
+
+.hello {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.introduce {
+    margin: 0;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.name {
+    color: var(--myPurple);
+}
+
+.exclamation {
+    margin: 0;
+    font-size: .83em;
+    font-weight: bold;
+}
+
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer{
+    font-size: 1.3em;
+    align-self: center;
+}
+
+.buttons {
+    align-self: center;
+}
+
+.contact-button {
+    border-radius: 100px;
+    background-color: var(--myPurple);
+    border: 2px solid var(--myPurple);
+    color: var(--myWhite);
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Laila', sans-serif;
+    margin-right: 30px;
+    width: 140px;
+}
+
+.contact-button:hover {
+    background-color: var(--myGreen);
+    border: 2px solid var(--myGreen);
+    cursor: pointer;
+}
+
+.cv-button {
+    border-radius: 100px;
+    background-color: var(--myWhite);
+    border: 2px solid var(--myPurple);
+    color: var(--myPurple);
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Laila', sans-serif;
+    width: 140px;
+ }
+
+ .cv-button:hover {
+    border: 2px solid var(--myGreen);
+    color: var(--myGreen);
+    cursor: pointer;
+ }
