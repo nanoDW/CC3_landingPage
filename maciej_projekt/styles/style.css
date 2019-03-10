@@ -13,12 +13,21 @@ a {
 }
 
 :root {
+    /* Color variables */
     --color-primary: #2c88cb;
     --color-primary-darker: #275779;
     --color-primary-transparent: rgba(44, 136, 203, 0.9);
     --color-secondary: #FDC32F;
     --color-dark-text: #222;
     --color-gray-background: #F9F9F9;
+
+    /* Skills variables */
+    --skills-html: 75%;
+    --skills-css: 68%;
+    --skills-js: 43%;
+    --skills-responsibility: 90%;
+    --skills-communication:65%;
+    --skills-teamwork: 75%;
 }
 
 header {
@@ -34,23 +43,20 @@ header {
     width: 300px;
     position: absolute;
     top: 55%;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    margin: 0 calc(50% - (300px/2));
     font-family: 'Ubuntu', sans-serif;
 }
-.hero h1 {
+.hero h2 {
     font-size: 5.5em;
     font-weight: bold;
     line-height: 1.5;
 }
-.hero h2 {
+.hero .name {
     font-size: 2.2em;
     font-weight: bold; 
     line-height: 1.5;
 }
-.hero p {
+.hero .desc {
     font-size: 1.8em;
 }
 .hero span {
@@ -64,10 +70,7 @@ header {
     height: 230px;
     width: 230px;
     top: 15%;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    margin: 0 calc(50% - (230px/2));
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
 }
 /* Hamburger animation made by Jonathan Suh @jonsuh 
@@ -106,10 +109,17 @@ header {
 }
 
 .navigation a {
+    display: block;
     font-size: 3em;
     color: #FFF;
+    line-height:2;
+    transition: 0.3s ease;
 }
-/* dodać hovery!!! */
+.navigation a:hover {
+    color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
 
 .social ul {
     display: flex;
@@ -117,18 +127,23 @@ header {
     justify-content: space-evenly;
 
 }
-.social p {
+.social h2 {
     font-size: 2em;
     color: #FFF;
     text-align: center;
     line-height: 3;
 }
-.social a {
+.social a  {
     font-size: 4em;
-    color: #FFF;
+    color: #FFF;   
 }
-/* dodać hovery!!! */
-
+.social i {
+    transition: 0.3s ease;
+}
+.social a:hover i {
+    color: var(--color-secondary);
+    transform: scale(1.2);
+}
 
 /* End of header styling */
 
@@ -139,8 +154,9 @@ header {
     color: var(--color-dark-text);
     margin: 15px 15px 40px 15px;
     text-align: center;
+    
 }
-.intro h1 {
+.intro h2 {
     font-size: 2em;
     margin: 10px 0;
     font-weight: 100;
@@ -162,11 +178,25 @@ header {
 .intro button.button-contact{
     color: #FFF;
     background-color: var(--color-primary);
+    transition: 0.3s ease;
+}
+.intro button.button-contact:hover {
+    cursor: pointer;
+    color: var(--color-dark-text);
+    background-color: var(--color-secondary);
 }
 .intro button.button-cv{
     color:  var(--color-primary);
     border: 1px solid var(--color-primary);
     background-color: #FFF;
+    transition: 0.3s ease;
+}
+
+.intro button.button-cv:hover {
+    cursor: pointer;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+   
 }
 /* dodać hovery!!! */
 
@@ -181,9 +211,9 @@ header {
 #about {
     font-family: 'Ubuntu', sans-serif;
 }
-#about h1 {
+#about h2 {
     text-align: center;
-    font-size: 2.5em; 
+    font-size: 2em; 
     padding-top: 15px;
     margin: 10px auto;
 }
@@ -193,25 +223,93 @@ header {
     align-items: center;
     background-color: #FFF;
     margin: 15px 20px;
-    font-size: 1.8em;
+    font-size: 1.3em;
     padding: 15px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
 }
-.about-container aside {
+.about-container .about-data {
     font-weight: bold;
     line-height: 1.7;
 }
-.about-container aside span {
+.about-container .about-data span {
     color: var(--color-primary);
 }
-.about-container article {
+.about-container p {
     margin-top: 20px;
     border-top: 2px solid var(--color-primary);
-    padding: 20px;
+    padding: 20px 0;
     text-align: justify;
     line-height: 1.5;
 }
 
 /* End of about section */
+/* Start of skills section */
+#skills {
+    font-family: 'Ubuntu', sans-serif;
+}
+#skills h2 {
+    text-align: center;
+    font-size: 2em; 
+    padding-top: 15px;
+    margin: 10px auto;
+}
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 1.3em;
+}
+.skills-container h3 {
+    text-align: center;
+    line-height: 2;
+}
+.skills-hard, .skills-soft {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #FFF;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+}
+.skills-item {
+    padding: 10px 0;
+}
+.skills-item p {
+    font-size: 0.8em;
+    line-height: 2;
+}
+.skills-item .slider {
+    width: 100%;
+    background-color: #E7E7E7;
+    height: 10px;
+    border-radius: 5px;
+}
+.slider-inner {
+    height: 100%;
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-darker));
+    border-radius: 5px;
+}
+.slider-html {
+    width: var(--skills-html);
+}
+.slider-css {
+    width: var(--skills-css);
+}
+.slider-js {
+    width: var(--skills-js);
+}
+.slider-responsibility {
+    width: var(--skills-responsibility);
+}
+.slider-communication {
+    width: var(--skills-communication);
+}
+.slider-teamwork {
+    width: var(--skills-teamwork);
+}
+
+/* End of skills section */
 /* End of main section */
 
 
@@ -226,18 +324,31 @@ header {
     .hero {
         width: 420px;
         top: 55%;
+        margin: 0 calc(50% - (420px/2));
     }
     .profile-pic {
         height: 300px;
         width: 300px;
+        margin: 0 calc(50% - (300px/2));
     }
     /* End of header styling */
     /* Start of Intro section */
-    .intro h1 {
+    .intro h2 {
         font-size: 3em;
         margin: 20px 0;
     }
     /* End of Intro section */
+    /* Start of skills section */
+    .skills-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .skills-hard, .skills-soft {
+        flex-grow: 1;
+        max-width: 500px;
+    }
+   
+    /* End of skills section */
 }
 
 
@@ -256,7 +367,8 @@ header {
     .profile-pic {
         height: 210px;
         width: 210px;
-        margin-right: 90px; 
+        margin: 0;
+        right: 150px; 
         top: 25%;
     }
     .menu {
@@ -283,28 +395,18 @@ header {
         justify-content: space-around;
         width: 450px;
     }
-    .intro h1 {
+    .intro h2 {
         font-size: 3.3em;
     }
     /* End of Intro section */
     /* Start of about section */
-    .about-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .about-container article {
+    .about-container p {
         margin: 0 0 20px 0;
-        border-top: none;
-        border-left: 2px solid var(--color-primary);
         padding: 20px;
-        text-align: justify;
-        line-height: 1.5;
         max-width: 650px;
     }
-    .about-container aside {
-        padding: 0 20px;
-    }
-    
+    /* End of about section */
+ 
 
 }
     
@@ -351,7 +453,7 @@ header {
         width: 150px;
         margin-right: 40px;
     }
-    .social p {
+    .social h2 {
         font-size: 1.4em;
         text-align: right;
     }
@@ -370,6 +472,19 @@ header {
         top: 110px;
     }
 /* End of header styling */
+/* Start of about section */
+    .about-container {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .about-container p {
+        border-top: none;
+        border-left: 2px solid var(--color-primary);
+    }
+
+/* End of about section */
 } 
 
 @media only screen and (min-width: 1200px) { 
@@ -398,6 +513,7 @@ header {
     max-width: 1170px;
     margin: auto;
    }
+
    /* End of about section */
     /* End of main section */
 }
