@@ -204,7 +204,7 @@ header {
 /* Start of main section */
 .main {
     background-color: var(--color-gray-background);
-    font-size: 10px
+    font-size: 10px;
     color: var(--color-dark-text);
 }
 /* Start of about section */
@@ -223,25 +223,24 @@ header {
     align-items: center;
     background-color: #FFF;
     margin: 15px 20px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 15px;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
 }
 .about-container .about-data {
     font-weight: bold;
     line-height: 1.7;
+    padding: 20px;
 }
 .about-container .about-data span {
     color: var(--color-primary);
 }
 .about-container p {
-    margin-top: 20px;
     border-top: 2px solid var(--color-primary);
     padding: 20px 0;
     text-align: justify;
     line-height: 1.5;
 }
-
 /* End of about section */
 /* Start of skills section */
 #skills {
@@ -257,7 +256,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 .skills-container h3 {
     text-align: center;
@@ -308,8 +307,86 @@ header {
 .slider-teamwork {
     width: var(--skills-teamwork);
 }
-
 /* End of skills section */
+/* Start of portfolio section */
+#portfolio {
+    font-family: 'Ubuntu', sans-serif;
+}
+#portfolio h2 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 15px;
+    margin: 10px auto;
+}
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+}
+.portfolio-item {
+    padding: 15px;
+    max-width: 400px;
+    background-color: #FFF;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+
+}
+.portfolio-img {
+    background-size: cover;
+    height: 250px;
+    /* transition: 0.5s ease; */
+}
+.portfolio-item:nth-child(1) .portfolio-img {
+    background-image: url(/maciej_projekt/images/portfolio/1.jpg);
+}
+.portfolio-item:nth-child(2) .portfolio-img {
+    background-image: url(/maciej_projekt/images/portfolio/2.jpg);
+}
+.portfolio-item:nth-child(3) .portfolio-img {
+    background-image: url(/maciej_projekt/images/portfolio/3.jpg);
+}
+.portfolio-item:nth-child(4) .portfolio-img {
+    background-image: url(/maciej_projekt/images/portfolio/4.jpg);
+}
+.portfolio-item:nth-child(5) .portfolio-img {
+    background-image: url(/maciej_projekt/images/portfolio/5.jpg);
+}
+.portfolio-item:nth-child(6) .portfolio-img {
+    background-image: url(/maciej_projekt/images/portfolio/6.jpg);
+}
+.portfolio-img--overlay {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    
+}
+/* .portfolio-img--overlay h4 {
+    color: #FFF;
+    font-size: 1.6em;
+    text-align: center;
+}
+.portfolio-img:hover .portfolio-img--overlay {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+.portfolio-desc {
+    margin: 10px;
+}
+.portfolio-desc h3 {
+    font-size: 1.5em;
+}
+.portfolio-desc a,p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.portfolio-desc a {
+    color: var(--color-primary);
+    transition: 0.3s ease;
+}
+.portfolio-desc a:hover {
+    color: var(--color-secondary);
+}
+/* End of portfolio section */
 /* End of main section */
 
 
@@ -334,14 +411,17 @@ header {
     /* End of header styling */
     /* Start of Intro section */
     .intro h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         margin: 20px 0;
     }
     /* End of Intro section */
+    .about-container .about-data {
+        min-width: 370px;
+    }
     /* Start of skills section */
     .skills-container {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
     }
     .skills-hard, .skills-soft {
         flex-grow: 1;
@@ -401,11 +481,14 @@ header {
     /* End of Intro section */
     /* Start of about section */
     .about-container p {
-        margin: 0 0 20px 0;
         padding: 20px;
         max-width: 650px;
     }
     /* End of about section */
+
+    .portfolio-container {
+        grid-template-columns: 1fr 1fr;
+    }
  
 
 }
@@ -485,8 +568,13 @@ header {
     }
 
 /* End of about section */
+.portfolio-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1440px;
+    margin: auto;
+}
+    
 } 
-
 @media only screen and (min-width: 1200px) { 
      /* Start of header styling */
     header {
@@ -510,11 +598,16 @@ header {
     /* Start of main section */
    /* Start of About section */
    .about-container {
+    font-size: 1.5em;
     max-width: 1170px;
     margin: auto;
    }
-
    /* End of about section */
+
+   .skills-container {
+       max-width: 1200px;
+       margin: auto;
+   }
     /* End of main section */
 }
 
