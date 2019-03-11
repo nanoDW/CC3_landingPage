@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 ul {
     list-style: none;
 }
@@ -19,6 +22,7 @@ a {
     --color-primary-transparent: rgba(44, 136, 203, 0.9);
     --color-secondary: #FDC32F;
     --color-dark-text: #222;
+    --color-gray-text: #A0A0A0;
     --color-gray-background: #F9F9F9;
 
     /* Skills variables */
@@ -33,7 +37,7 @@ a {
 header {
     font-size: 10px;
     height: 100vh;
-    background-image: linear-gradient(rgba(250, 250, 250, 0.6), rgba(200, 200, 200, 0.7)), url(/maciej_projekt/images/cover4.jpg);
+    background-image: linear-gradient(rgba(250, 250, 250, 0.6), rgba(200, 200, 200, 0.7)), url(../images/cover4.jpg);
     background-position: center;
     background-size: cover;
     color: var(--color-dark-text);
@@ -63,7 +67,7 @@ header {
     color: var(--color-primary-darker);
 }
 .profile-pic {
-    background-image: url(/maciej_projekt/images/profile.jpg);
+    background-image: url(../images/profile.jpg);
     background-size: cover;
     position: absolute;
     border-radius: 50%;
@@ -321,15 +325,14 @@ header {
 .portfolio-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 20px;
     justify-items: center;
 }
 .portfolio-item {
+    margin: 20px;
     padding: 15px;
     max-width: 400px;
     background-color: #FFF;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
-
 }
 .portfolio-img {
     background-size: cover;
@@ -337,30 +340,29 @@ header {
     /* transition: 0.5s ease; */
 }
 .portfolio-item:nth-child(1) .portfolio-img {
-    background-image: url(/maciej_projekt/images/portfolio/1.jpg);
+    background-image: url(../images/portfolio/1.jpg);
 }
 .portfolio-item:nth-child(2) .portfolio-img {
-    background-image: url(/maciej_projekt/images/portfolio/2.jpg);
+    background-image: url(../images/portfolio/2.jpg);
 }
 .portfolio-item:nth-child(3) .portfolio-img {
-    background-image: url(/maciej_projekt/images/portfolio/3.jpg);
+    background-image: url(../images/portfolio/3.jpg);
 }
 .portfolio-item:nth-child(4) .portfolio-img {
-    background-image: url(/maciej_projekt/images/portfolio/4.jpg);
+    background-image: url(../images/portfolio/4.jpg);
 }
 .portfolio-item:nth-child(5) .portfolio-img {
-    background-image: url(/maciej_projekt/images/portfolio/5.jpg);
+    background-image: url(../images/portfolio/5.jpg);
 }
 .portfolio-item:nth-child(6) .portfolio-img {
-    background-image: url(/maciej_projekt/images/portfolio/6.jpg);
+    background-image: url(../images/portfolio/6.jpg);
 }
 .portfolio-img--overlay {
     visibility: hidden;
     width: 100%;
     height: 100%;
-    
 }
-/* .portfolio-img--overlay h4 {
+.portfolio-img--overlay h4 {
     color: #FFF;
     font-size: 1.6em;
     text-align: center;
@@ -368,28 +370,52 @@ header {
 .portfolio-img:hover .portfolio-img--overlay {
     visibility: visible;
     background-color: rgba(0, 0, 0, 0.5);
-} */
+}
 .portfolio-desc {
     margin: 10px;
 }
 .portfolio-desc h3 {
     font-size: 1.5em;
 }
-.portfolio-desc a,p {
+.portfolio-desc p {
     font-size: 1.2em;
     line-height: 1.5;
+    color: var (--color-gray-text);
 }
 .portfolio-desc a {
     color: var(--color-primary);
     transition: 0.3s ease;
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 .portfolio-desc a:hover {
     color: var(--color-secondary);
 }
 /* End of portfolio section */
+/* Start of contact section */
+#contact {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 15px;
+    margin: 10px auto;
+}
 /* End of main section */
-
-
+/* Footer */
+footer {
+    width: 100%;
+    margin-top: 20px;
+}
+footer p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    line-height: 3
+}
 /* ****Start of media queries**** */
 
 @media only screen and (min-width: 480px) {  
@@ -415,6 +441,7 @@ header {
         margin: 20px 0;
     }
     /* End of Intro section */
+    /* Start of about section */
     .about-container .about-data {
         min-width: 370px;
     }
@@ -427,10 +454,8 @@ header {
         flex-grow: 1;
         max-width: 500px;
     }
-   
     /* End of skills section */
 }
-
 
 @media only screen and (min-width: 768px) {  
     /* Start of header styling */
