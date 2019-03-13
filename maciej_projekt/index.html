@@ -122,8 +122,8 @@
           <div class="portfolio-container">
             <div class="portfolio-item">
                 <div class="portfolio-img">
-                   <div class="portfolio-img--overlay">
-                      <h4>Project 1</h4>
+                   <div class="portfolio-img-overlay">
+                      <h4><a href="#">Project 1</a></h4>
                    </div>
                 </div>
                 <div class="portfolio-desc">
@@ -134,8 +134,8 @@
             </div>
             <div class="portfolio-item">
                   <div class="portfolio-img">
-                     <div class="portfolio-img--overlay">
-                        <h4>Project 2</h4>
+                     <div class="portfolio-img-overlay">
+                        <h4><a href="#">Project 2</a></h4>
                      </div>
                   </div>
                   <div class="portfolio-desc">
@@ -146,8 +146,8 @@
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
-                  <div class="portfolio-img--overlay">
-                     <h4>Project 3</h4>
+                  <div class="portfolio-img-overlay">
+                     <h4><a href="#">Project 3</a></h4>
                   </div>
                </div>
                <div class="portfolio-desc">
@@ -158,8 +158,8 @@
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
-                  <div class="portfolio-img--overlay">
-                     <h4>Project 4</h4>
+                  <div class="portfolio-img-overlay">
+                     <h4><a href="#">Project 4</a></h4>
                   </div>
                </div>
                <div class="portfolio-desc">
@@ -170,8 +170,8 @@
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
-                  <div class="portfolio-img--overlay">
-                     <h4>Project 5</h4>
+                  <div class="portfolio-img-overlay">
+                     <h4><a href="#">Project 5</a></h4>
                   </div>
                </div>
                <div class="portfolio-desc">
@@ -182,8 +182,8 @@
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
-                  <div class="portfolio-img--overlay">
-                     <h4>Project 6</h4>
+                  <div class="portfolio-img-overlay">
+                     <h4><a href="#">Project 6</a></h4>
                   </div>
                </div>
                <div class="portfolio-desc">
@@ -195,14 +195,38 @@
           </div>
        </section>
        <section id="contact">
-         <div class="contact-info"></div>
-         <form action="#" method="#">
+         <div class="contact-info">
             <h2>Feel free to contact me!</h2>
-            <input type="text" placeholder="">
+            <div class="contact-text">
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, laudantium dolorum magni eveniet nam praesentium.</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, est?</p>
+            </div>
+            <div class="contact-details">
+               <p><span>Poland, Wrocław</span></p>
+               <p>Lorem street 12/3, 53-123</p>
+               <p>+48 123 456 789</p>
+               <p>lorem.ipsum@internet.com</p>
+            </div>
+         </div>
+         <form class="contact-form" action="" method="">
+            <fieldset>
+               <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+               <input placeholder="Your Email Address" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+               <input placeholder="Topic" type="text" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+               <textarea placeholder="Type your Message Here...." tabindex="4" required></textarea>
+            </fieldset>
+            <fieldset>
+               <button type="submit" tabindex="5">Send your message!</button>
+            </fieldset>
          </form>
        </section>
     </div>
-    <div id="contact"></div>
     <footer>
        <p>&copy; 2019 Maciej Korolik</p>
     </footer>
