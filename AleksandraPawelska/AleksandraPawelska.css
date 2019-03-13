@@ -310,21 +310,17 @@ main ul{
 }
 .project-gallery img {
     width: 100%;
-    width: 430px;
+    width: 400px;
     height: 264.4px;
     margin: 0;
     padding: 0;
     object-fit: cover;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
-.img{
-    background-color: #000;
-}
 
 .project-gallery img:hover{
     transform: scale(0.9);
     opacity: 0.4;
-
 }
 
 
