@@ -251,6 +251,7 @@ main ul{
     flex-direction: column;
     flex-wrap: wrap;
     background-color:rgb(255, 255, 255);
+    min-width: 400px;
 }
 .softskills{
     border-left: 1px dotted black;
@@ -305,6 +306,7 @@ main ul{
     width: auto;
     margin: 0 5%;
     justify-items: center;
+    transform: all 3s ease-in-out;
 }
 .project-gallery img {
     width: 100%;
@@ -314,6 +316,15 @@ main ul{
     padding: 0;
     object-fit: cover;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.img{
+    background-color: #000;
+}
+
+.project-gallery img:hover{
+    transform: scale(0.9);
+    opacity: 0.4;
+
 }
 
 
