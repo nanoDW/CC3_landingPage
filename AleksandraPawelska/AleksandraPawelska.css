@@ -1,0 +1,334 @@
+:root {
+    font-size: 18px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    background-color: rgb(234, 233, 236);
+}
+
+/* HEADER */
+header{
+    text-align:center;
+}
+nav{
+    background-color: #000;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+a {
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px 5px;
+    text-align:center;
+}
+a:hover {
+    background:rgba(236, 227, 227, 0.3);
+  }
+.flex ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0.3);
+}
+.flex li{
+    flex: 4;
+}
+.flex .social {
+    flex: 1;
+}
+.social a{
+    display: flex-inline;
+    background: #27292c;
+    font-size:24px;
+    transition: 0.4s;
+}
+.social a:hover{
+    background: #e67e22;
+}
+.social a:hover > i {
+    transform: scale(1.5) rotate(25deg);
+}
+
+/* INTRODUCE */
+header {
+    padding:2em;
+    position: relative;
+    background-size: cover;
+    background-image: url("https://bit.ly/2NO91uo") ;
+    background-position: center;
+}
+.introduce img {
+    border-radius: 100%;
+    border: 2px solid #fff;
+    max-width: 150px;  
+    margin-top: 3em;
+}
+.introduce:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+}
+.introduce *{
+    position: relative;
+}
+.container {
+    font-family:Mukta, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 70vw;
+    line-height: 1.5;
+    font-size: 20px;  
+}
+.container h1{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 55px;
+    font-family: Mukta, sans-serif;
+    opacity: 0;
+    animation-name:conth1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes conth1 {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+.container p{
+    opacity: 0;
+    animation-name:cntp;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cntp {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/*BUTTONS*/
+.buttons{
+    display:flex;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    padding: 1%;
+    margin: 0;
+}
+.buttons h4{
+    margin: 0;
+    opacity: 0;
+    animation-name:btnh4;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btnh4 {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+.clickbutton{
+    display: inline-block;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.contactbutton,
+.cvbutton {
+    display: inline-block;
+    font-weight: bold;
+    border: 4px solid rgb(36, 3, 95);
+    background-color: #fff;
+    color: rgb(36, 3, 95);
+    width: fit-content;
+    padding: 0.7% 1%;
+    margin: 0 0.3%;
+    position: relative;
+    opacity: 0;
+    animation-name:btn;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+@keyframes btn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+.contactbutton:hover,
+.cvbutton:hover {
+    transform: rotateY(180deg)
+}
+/* CONTENT*/
+main{
+    display:flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+main h3 {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+}
+main ul{
+    padding: 0;
+}
+/* ABOUT ME */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 0 10%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+.contact li{
+    flex:1;
+    box-sizing: border-box;
+    text-align: justify;
+    list-style: none;
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 1% 5%;
+    font-weight: bold;
+    line-height: 2;
+}
+.description {
+    flex: 1;
+    text-align: justify;
+    list-style: none;
+    max-width: 100%;
+    padding: 2% 5%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* SKILLS*/
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 10%;
+    justify-content: space-around;
+    justify-content: center;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hardskills,
+.softskills{
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color:rgb(255, 255, 255);
+    min-width: 400px;
+}
+.softskills{
+    border-left: 1px dotted black;
+}
+.softskillsheader,
+.hardskillsheader {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+.softskillslist,
+.hardskillslist {
+    list-style: none;
+    width:100%;
+    text-align: center;
+}
+
+.contact span{
+    color: rgb(36, 3, 95);
+}
+
+.skill-listlvl{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    min-height: 0.5rem;
+    width: 80%;
+    
+    background: linear-gradient(100deg, rgb(36, 3, 95) 0%, rgb(111, 174, 233) 100%);
+    margin: auto;
+}
+
+/*PROJECTS*/
+#projects{
+    /*border: 5px solid gray;
+    max-width: 100%;*/
+}
+.project-container p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin: 1% 5.7%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 5px;
+    width: auto;
+    margin: 0 5%;
+    justify-items: center;
+    transform: all 3s ease-in-out;
+}
+.project-gallery img {
+    width: 100%;
+    width: 400px;
+    height: 264.4px;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-gallery img:hover{
+    transform: scale(0.9);
+    opacity: 0.4;
+}
+
+
+/* FOOTER*/
+.footer {
+    display: flex;
+    color: #fff;
+    background-color: #000;
+    justify-content: center;
+    font-size: 12px;
+}
