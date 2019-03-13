@@ -24,30 +24,37 @@
                 <li class="navigation__item">
                     <a href="#gallery">Gallery</a>
                 </li>
-                <li class="navigation__item last-item">
+                <li class="navigation__item navigation__item--last-item">
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
         <div class="header__intro">
-            <p class="intro__greeting">Hi there!</p>
-            <p class="intro__name">My name is Kamila</p>
+            <div class="intro__greeting">
+                <div class="greeting__text">
+                    <p class="greeting__hi">Hi there!</p>
+                    <p class="greeting__name">My name is Kamila</p>
+                </div>
+                <img src="images/Kamila.jpg" class="intro__portrait" alt="Kamila Spodymek"> 
+            </div>
         </div>
-        <img class="portrait">
-        <div class="header__socials">
-            <p class="socials__paragraph">Useful links</p>
-            <ul class="socials__links">
-                <li><a href="https://github.com/KamilaCoder"></a></li>
-                <li><a href="https://www.linkedin.com/in/kamilaspodymek/"></a></li>
-            </ul>
+        
+        <div class="header__socials--container">
+            <div class="header__socials"> 
+                <p class="socials__paragraph">Useful links</p>
+                <ul class="socials__links">
+                    <li class="links__github"><a href="https://github.com/KamilaCoder"><i class="fab fa-github"></i></a></li>
+                    <li class="links__linkedin"><a href="https://www.linkedin.com/in/kamilaspodymek/"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div> 
         </div>
     </header>
 
     <section class="invite">
         <h1 class="invite__text">I'll be happy to create some projects with you!</h1>
         <div class="invite__buttons">
-            <button type="button" class="invite__button"></button>
-            <button type="button" class="invite__button">deewe</button>
+            <button type="button" class="invite__button invite__button--contact">Contact me</button>
+            <button type="button" class="invite__button invite__button--cv">Check my CV</button>
         </div>
     </section>
 
@@ -76,19 +83,28 @@
                     <h3 class="hard-skills__header">Hard ones</h3>
                     <ul class="hard-skills__list">
                         <li>HTML</li>
+                        <li class="skills__list--level"></li>
                         <li>CSS</li>
+                        <li class="skills__list--level"></li>
                         <li>JavaScript</li>
+                        <li class="skills__list--level"></li>
                         <li>Python</li>
+                        <li class="skills__list--level"></li>
                         <li>Search Engine Optimization</li>
+                        <li class="skills__list--level"></li>
                     </ul>
                 </div>
                 <div class="skills-container__soft-skills">
                     <h3 class="soft-skills__header">Soft ones</h3>
                     <ul class="soft-skills__list">
                         <li>Team management</li>
+                        <li class="skills__list--level"></li>
                         <li>Project management</li>
+                        <li class="skills__list--level"></li>
                         <li>Problem solving</li>
+                        <li class="skills__list--level"></li>
                         <li>Remote work</li>
+                        <li class="skills__list--level"></li>
                     </ul>
                 </div>
             </div>
@@ -124,13 +140,9 @@
                 <div class="contact-form__left-side">
                     <p class="left-side__paragraph">Got a question? I’m here to help you! Send me a message and I will answer you as
                         soon as possible!</p>
-                    <div class="left-side__address">
-                    </div>
                     <ul class="left-side__socials">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li class="socials__github"><a href="https://github.com/KamilaCoder"><i class="fab fa-github"></i></a></li>
+                        <li class="socials__linkedin"><a href="https://www.linkedin.com/in/kamilaspodymek/"><i class="fab fa-linkedin"></i></a></li>
                     </ul>
                 </div>
                 <div class="contact-form__right-side">
@@ -140,7 +152,9 @@
                         <input type="email" class="form__email">
                         <input type="text" class="form__title">
                         <textarea class="form__message"></textarea>
-                        <button type="submit" class="form__submit"></button>
+                        <div class="form__submit">
+                            <button type="submit" class="submit__button">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -149,7 +163,7 @@
     </main>
         
     <footer class="footer">
-        <p class="footer__paragraph">Created with love by Kamila</p>
+<p class="footer__paragraph">Created with <i class="fas fa-heart"></i> by Kamila</p>
     </footer>
 
 </body>
