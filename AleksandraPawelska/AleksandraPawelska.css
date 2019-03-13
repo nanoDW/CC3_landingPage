@@ -323,7 +323,24 @@ main ul{
     opacity: 0.4;
 }
 
-
+/*CONTACT*/
+.contact2 h3{
+    color: #fff;
+}
+.contact2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+}
+.social2{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.social li{
+    list-style: none;
+}
 /* FOOTER*/
 .footer {
     display: flex;
