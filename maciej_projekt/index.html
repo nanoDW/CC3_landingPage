@@ -13,10 +13,10 @@
 <body>
     <header>
         <div class="hero">
-            <h1>Hi there!</h1>
-            <h2>My name is <span>Maciej Korolik</span></h2>
-            <p>I am front end developer</p>
-            <p>Lorem ipsum dolor sit amet</p>
+            <h2>Hi there!</h2>
+            <p class="name">My name is <span>Maciej Korolik</span></p>
+            <p class="desc">I am front end developer</p>
+            <p class="desc">Lorem ipsum dolor sit amet</p>
         </div>
         <button onclick="toggleMenu()"class="hamburger hamburger--elastic" type="button">
             <span class="hamburger-box">
@@ -27,37 +27,36 @@
         <div class="menu">
            <nav>
               <ul class="navigation">
-                 <a class="nav-link" href="#about"><li>About me</li></a>
-                 <a class="nav-link" href="#skills"><li>Skills</li></a>
-                 <a class="nav-link" href="#portfolio"><li>Portfolio</li></a>
-                 <a class="nav-link" href="#contact"><li>Contact</li></a>
+                 <li><a class="nav-link" href="#about">About me</a></li>
+                 <li><a class="nav-link" href="#skills">Skills</a></li>
+                 <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                 <li><a class="nav-link" href="#contact">Contact</a></li>
               </ul>
            </nav>
-           <div class="hello"></div>
-           <div class="social">
-              <p>Useful links:</p>
+           <section class="social">
+              <h2>Useful links:</h2>
               <ul>
                  <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                  <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
                  <li><a href="#"><i class="fab fa-github-square"></i></a></li>
               </ul>
-            </div>
+            </section>
         </div>
         <div class="profile-pic"></div>
     </header>
-    <div class="intro">
-       <h1>Let me know how can I help you with your projects!</h1>
+    <section class="intro">
+       <h2>Let me know how can I help you with your projects!</h2>
        <div class="buttons">
          <button class="button-contact">Contact me!</button>
          <button class="button-cv">Check my CV</button>
       </div>
-    </div>
+    </section>
     <div class="main">
        <section id="about">
-          <h1>About me</h1>
+          <h2>About me</h2>
           <div class="about-container">
-             <aside>
+             <div class="about-data">
                 <ul>
                    <li>Full name: <span>Maciej Korolik</span></li>
                    <li>Age: <span>24 years</span></li>
@@ -65,34 +64,70 @@
                    <li>Telephone: <span>+48 123456789</span></li>
                    <li>E-mail: <span>lorem.ipsum@internet.com</span></li>
                 </ul>
-             </aside>
-             <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ex ea commodo consequat.</p>
-             </article>
+             </div>
+             
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ex ea commodo consequat.</p>
+            
           </div>
        </section>
        <section id="skills">
-          <h1>Skills</h1>
+          <h2>Skills</h2>
           <div class="skills-container">
              <div class="skills-hard">
-                <h1>Hard ones</h1>
+                <h3>Hard ones</h3>
+                <div class="skills-item">
+                   <p>html</p>
+                   <div class="slider">
+                      <div class="slider-inner slider-html"></div>
+                   </div>
+                </div>
+                <div class="skills-item">
+                   <p>css</p>
+                   <div class="slider">
+                        <div class="slider-inner slider-css"></div>
+                     </div>
+                </div>
+                <div class="skills-item">
+                   <p>javascript</p>
+                   <div class="slider">
+                        <div class="slider-inner slider-js"></div>
+                     </div>
+                </div>
              </div>
              <div class="skills-soft">
-               <h1>Soft ones</h1>
+               <h3>Soft ones</h3>
+               <div class="skills-item">
+                  <p>responsibility</p>
+                  <div class="slider">
+                     <div class="slider-inner slider-responsibility"></div>
+                  </div>
+               </div>
+               <div class="skills-item">
+                  <p>communication</p>
+                  <div class="slider">
+                        <div class="slider-inner slider-communication"></div>
+                     </div>
+               </div>
+               <div class="skills-item">
+                  <p>teamwork</p>
+                  <div class="slider">
+                        <div class="slider-inner slider-teamwork"></div>
+                     </div>
+               </div>
              </div>
           </div>
        </section>
        <section id="portfolio">
-          <h1>Portfolio</h1>
-          <div class="porfolio-container">
+          <h2>Portfolio</h2>
+          <div class="portfolio-container">
             <div class="portfolio-item">
                 <div class="portfolio-img">
                    <div class="portfolio-img--overlay">
-                      <h1>Project 1</h1>
+                      <h4>Project 1</h4>
                    </div>
                 </div>
                 <div class="portfolio-desc">
-                   <h2>Project 1</h2>
+                   <h3>Project 1</h3>
                    <a href="#">www.project-one.pl</a>
                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis cupiditate incidunt...</p>
                 </div>
@@ -100,68 +135,77 @@
             <div class="portfolio-item">
                   <div class="portfolio-img">
                      <div class="portfolio-img--overlay">
-                        <h1>Project 1</h1>
+                        <h4>Project 2</h4>
                      </div>
                   </div>
                   <div class="portfolio-desc">
-                     <h2>Project 1</h2>
-                     <a href="#">www.project-one.pl</a>
+                     <h3>Project 2</h3>
+                     <a href="#">www.project-two.pl</a>
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis cupiditate incidunt...</p>
                   </div>
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
                   <div class="portfolio-img--overlay">
-                     <h1>Project 1</h1>
+                     <h4>Project 3</h4>
                   </div>
                </div>
                <div class="portfolio-desc">
-                  <h2>Project 1</h2>
-                  <a href="#">www.project-one.pl</a>
+                  <h3>Project 3</h3>
+                  <a href="#">www.project-three.pl</a>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis cupiditate incidunt...</p>
                </div>
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
                   <div class="portfolio-img--overlay">
-                     <h1>Project 1</h1>
+                     <h4>Project 4</h4>
                   </div>
                </div>
                <div class="portfolio-desc">
-                  <h2>Project 1</h2>
-                  <a href="#">www.project-one.pl</a>
+                  <h3>Project 4</h3>
+                  <a href="#">www.project-four.pl</a>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis cupiditate incidunt...</p>
                </div>
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
                   <div class="portfolio-img--overlay">
-                     <h1>Project 1</h1>
+                     <h4>Project 5</h4>
                   </div>
                </div>
                <div class="portfolio-desc">
-                  <h2>Project 1</h2>
-                  <a href="#">www.project-one.pl</a>
+                  <h3>Project 5</h3>
+                  <a href="#">www.project-five.pl</a>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis cupiditate incidunt...</p>
                </div>
             </div>
             <div class="portfolio-item">
                <div class="portfolio-img">
                   <div class="portfolio-img--overlay">
-                     <h1>Project 1</h1>
+                     <h4>Project 6</h4>
                   </div>
                </div>
                <div class="portfolio-desc">
-                  <h2>Project 1</h2>
-                  <a href="#">www.project-one.pl</a>
+                  <h3>Project 6</h3>
+                  <a href="#">www.project-six.pl</a>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis cupiditate incidunt...</p>
                </div>
             </div>
           </div>
        </section>
+       <section id="contact">
+         <div class="contact-info"></div>
+         <form action="#" method="#">
+            <h2>Feel free to contact me!</h2>
+            <input type="text" placeholder="">
+         </form>
+       </section>
     </div>
     <div id="contact"></div>
-    <footer></footer>
+    <footer>
+       <p>&copy; 2019 Maciej Korolik</p>
+    </footer>
     <script>
      
       const navigationLink = document.querySelectorAll('.nav-link');
