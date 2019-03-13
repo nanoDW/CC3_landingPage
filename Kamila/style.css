@@ -1,5 +1,8 @@
-body {
+:root {
     font-size: 18px;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: #D2E1F4;
@@ -20,7 +23,7 @@ a:visited {
 }
 
 a:hover {
-    color: #701D3B;
+    color: #AF0A94;
 }
 
 ul {
@@ -36,6 +39,7 @@ ul {
     background-size: cover;
     background-position: center;
     height: 85vh;
+    min-height: 700px;
     width: 100%;
     color: white;
     
@@ -45,13 +49,14 @@ ul {
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    padding: 0.5rem;
-    font-size: 1.3rem;
+    padding: 1% 1.5%;
+    font-size: 1rem;
     background-color: rgba(18, 55, 70, 0.5);
 }
 
 .navigation__item {
-    padding: 1rem 1.5rem;
+    padding: 0.5% 2%;
+    white-space: nowrap;
 }
 
 .last-item {
@@ -59,30 +64,70 @@ ul {
 }
 
 .header__intro {
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    /* background-color: rgba(16, 43, 35, 0.7); */
-    background-color: rgba(18, 55, 70, 0.7);
-    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;
 }
 
 .intro__greeting {
-    font-size: 5rem;
+    display: flex;
+}
+
+.greeting__text {
+    align-self: center;
+    white-space: nowrap;
+    background-color: rgba(18, 55, 70, 0.7);
+    padding: 7%;
+    border-radius: 5%;
+}
+
+.greeting__hi {
+    font-size: 4rem;
     margin: 0;  
 }
 
-.intro__name {
-    font-size: 2rem;
+.greeting__name {
+    font-size: 1.5rem;
     margin: 0;
 }
 
+.intro__portrait {
+    width: 200px;
+    height: 200px;
+    border: 20px solid rgba(18, 55, 70, 0.7);
+    border-radius: 50%;
+}
+
+.header__socials--container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8vh;
+}
+
 .header__socials {
-    position: absolute;
-    top: 80%;
-    left: 80%;
-    padding: 1rem;
-    background-color: rgba(18, 55, 70, 0.7);
+    background-color: rgba(18, 55, 70, 0.5);
+    border-radius: 5%;
+    margin-right: 1%;
+    padding: 0 2%;
+
+}
+
+.socials__paragraph {
+    white-space: nowrap;
+}
+
+.socials__links {
+    padding: 0;
+}
+
+.links__github, 
+.links__linkedin {
+    display: inline;
+    padding: 7%;
+}
+
+.fab {
+    font-size: 1.5rem;
 }
 
 .invite {
@@ -102,8 +147,29 @@ ul {
 .invite__buttons {
     display: flex;
     justify-content: center;
-    padding: 3%;
+    padding: 2%;
 }
+
+.invite__button {
+    box-sizing: border-box;
+    font-family : inherit;
+    font-size : 100%;
+    margin: 1%;
+    width: fit-content;
+    padding: 1% 1.5%;
+    border-radius: 5%;
+    border: 4px solid #AF0A94;
+    color: #AF0A94;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.invite__button:hover {
+    background-color: #AF0A94;
+    color: white;
+}
+
 
 /* STYLES FOR SECTION HEADERS */
 
@@ -115,7 +181,7 @@ ul {
     margin: 0 auto;
     padding-top: 5%;
     padding-bottom: 3%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: normal;
     color: #028090;
 }
@@ -185,14 +251,30 @@ ul {
     padding-left: 40px;
 }
 
+.hard-skills__list {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.skills__list--level {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 0.7rem;
+    width: 90%;
+    background: linear-gradient(90deg, #AF0A94 0%, rgb(209, 144, 198) 100%);
+    border-radius: 20px;
+}
+
 
 /* STYLES FOR THE GALLERY */
 
 .gallery__intro {
     display: flex;
     justify-content: center;
-    margin: 1rem 5%;
-    padding: 1rem;
+    margin: 1% 5%;
+    padding: 1%;
     background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -231,6 +313,22 @@ ul {
     padding: 3%;
     background-color: #028090;
     box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-side__socials {
+    flex: 1 1 1;
+    align-self: flex-end;
+    padding: 0;
+}
+
+.socials__github,
+.socials__linkedin {
+    display: inline;
+
 }
 
 .contact-form__right-side {
@@ -254,7 +352,8 @@ ul {
     width: 100%;
     border: none;
     background: none;
-    padding-top: 5%;
+    margin-top: 3%;
+    padding: 1%;
     border-bottom: 1px solid rgba(45, 49, 66, 1);
     box-sizing: border-box;
     font-family : inherit;
@@ -263,12 +362,219 @@ ul {
 }
 .form__message {
     height: 8rem;
-    padding: 0;
-    margin-top: 10%;
+    padding: 1%;
+    margin-top: 7%;
+}
+
+.form__submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit__button {
+    box-sizing: border-box;
+    font-family : inherit;
+    font-size : 100%;
+    margin: 3% 0;
+    width: fit-content;
+    padding: 1% 1.5%;
+    border-radius: 5%;
+    border: 4px solid #AF0A94;
+    color: #AF0A94;
+    background-color: #D2E1F4;
+    font-weight: bold;
+}
+
+.submit__button:hover {
+    background-color: #AF0A94;
+    color: white;
+    font-weight: normal;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #AF0A94;
+    box-shadow: 0 0 3px #AF0A94;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 0px;
+    outline: none;
 }
 
 .footer__paragraph {
     display: flex;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
+}
+
+.fa-heart {
+    margin: 0 1%;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+    :root {
+        font-size: 16px;
+    }
+
+    .header {
+        min-height: 500px;
+        max-height: 600px;
+    }
+    .navigation {
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+
+    .header__intro {
+        margin-top: 10vh;
+    }
+
+    .intro__portrait {
+        width: 150px;
+        height: 150px;
+        order: -1;
+        margin: 7%;
+        align-self: center;
+    }
+
+    .intro__greeting {
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .greeting__hi {
+        font-size: 3.5rem;
+    }
+
+    .invite__text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .header__socials--container {
+        display: none;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container__contact-data,
+    .about-container__description {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .about-container__contact-data {
+        border-bottom: 2px solid #028090;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-container__hard-skills,
+    .skills-container__soft-skills {
+        max-width: 100%;
+    }
+
+    .skills-container__soft-skills {
+        margin-top: 3%;
+    }
+
+    .gallery__photos {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .contact-form {
+         flex-direction: column;
+     }
+
+    .contact-form__left-side {
+         order: -1;
+         max-width: 100%;
+         border-bottom: 2px solid white;
+     }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    :root {
+        font-size: 16px;
+    }
+
+    .navigation {
+    font-size: 1.2rem;
+    }
+
+    .header__socials--container { 
+        margin-top: 15%;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container__contact-data,
+    .about-container__description {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .about-container__contact-data {
+        border-bottom: 2px solid #028090;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-container__hard-skills,
+    .skills-container__soft-skills {
+        max-width: 100%;
+    }
+
+    .skills-container__soft-skills {
+        margin-top: 3%;
+    }
+
+    .gallery__photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-form__left-side {
+        order: -1;
+        max-width: 100%;
+        border-bottom: 2px solid white;
+    }
+   
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+   :root {
+       font-size: 18px;
+   }
+
+   .gallery__photos {
+       grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        font-size: 20px;
+    }
 }
